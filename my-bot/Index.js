@@ -13,9 +13,58 @@ bot.on("message", msg => {
   if (msg.content === "tic") {
     msg.reply("Tac")
   }
+  if (msg.content === "Régnauld") {
+    msg.reply("Tu veux parler de Dany plutôt !?")
+  }
+  if (msg.content === "Regnauld") {
+    msg.reply("Tu veux parler de Cathy plutôt !?")
+  }
+  if (msg.content === "Max") {
+    msg.reply("essaie en criant bières!")
+  }
+  if (msg.content === "Maxime") {
+    msg.reply("Tu veux plutôt dire Max !")
+  }
+  if (msg.content === "Morgane") {
+    msg.reply("Je suis une licorne , ouiiiiiiiii")
+  }
+  if (msg.content === "Boris") {
+    msg.reply("mmmmm, oui, boh")
+  }
+  if (msg.content === "Mathilde") {
+    msg.reply("Cours forest , Cours")
+  }
+  if (msg.content === "Sébastien") {
+    msg.reply("Blague nul en approche !")
+  }
+  if (msg.content === "Bastien") {
+    msg.reply(" !La familleee !")
+  }
+  if (msg.content === "Thomas") {
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    if (randomNumber<=50) {
+      msg.reply("C'est mon créateur !")
+    }
+    if (randomNumber>=50) {
+      msg.reply("C'est une légende !")
+    }
+  }
+  if (msg.content === "Guillaume") {
+    msg.reply("... that men is a meme !")
+  }
+  if (msg.content === "Ulys") {
+    msg.reply("Vive l'empereur !")
+  }
+  if (msg.content === "Baptiste") {msg.reply("il est con")}
+  if (msg.content ==="la fanfare d'Acoz"){msg.reply("le meilleure du royaume")}
+  if (msg.content ==="Mitch Mitch"){msg.reply("futur prix Nobel!")}
+  if (msg.content ==="Polo's Band"){msg.reply("Your mission,\nshould you choose to accept it,\n is to find Lindsey and bring her home.\nI''ve already assembled a team.\n I have them standing by,\n awaiting your word.\n This message, let's call it \n my excellent engagement gift to you, \n will self-destruct in five seconds. \n Good luck, Ethan, and thanks again.")}
+
+
+
   if (msg.content === "!GuessNumber"){
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-      const guesses = document.querySelector('.guesses');
+      const guesses = command.querySelector('.guesses');
       const lastResult = document.querySelector('.lastResult');
       const lowOrHi = document.querySelector('.lowOrHi');
       const guessSubmit = document.querySelector('.guessSubmit');
