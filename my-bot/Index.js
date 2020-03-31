@@ -66,7 +66,8 @@ bot.on("message", msg => {
   if (msg.content === "Les Basse") {     msg.reply("Sous Coté!!!")   }
   if (msg.content === "Qu'est ce qu'on veut?"){msg.reply("plus de solos!!!") }
   if (msg.content ==="Hey le bot ça va?"){msg.reply("Bien et toi ? mon petit!")}
-
+  if (msg.content === "Hey Jude") {
+    msg.reply("Don't let me go!")}
 
 
   if (msg.content === "!GuessNumber"){
@@ -90,6 +91,4 @@ function guessnumber(bot){
       else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gas !")}
   })
 }
-  }
-  if (msg.content === "Hey Jude") {
-    msg.reply("Don't let me go!")
+
