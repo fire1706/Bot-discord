@@ -67,7 +67,7 @@ bot.on("message", msg => {
   if (msg.content === "Qu'est ce qu'on veut?"){msg.reply("plus de solos!!!") }
   if (msg.content ==="Hey le bot ça va?"){msg.reply("Bien et toi ? mon petit!")}
   if (msg.content === "Hey Jude") {msg.reply("Don't let me go!")}
-  if (msg.content === "Musique"){msg.send("!play Hymne National de l'URSS")}
+  if (msg.content === "Musique"){msg.channel.send("!play Hymne National de l'URSS")}
 
   if (msg.content === "!GuessNumber"){
     msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx où xx sont les chiffres\n Bon jeu ");
