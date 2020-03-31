@@ -60,7 +60,7 @@ bot.on("message", msg => {
   if (msg.content ==="Mitch Mitch"){msg.reply("futur prix Nobel!")}
   if (msg.content ==="Polo's Band"){msg.reply("Your mission,\nshould you choose to accept it,\n is to find Lindsey and bring her home.\nI''ve already assembled a team.\n I have them standing by,\n awaiting your word.\n This message, let's call it \n my excellent engagement gift to you, \n will self-destruct in five seconds. \n Good luck, Ethan, and thanks again.")}
   if (msg.content ==="Pauline"){msg.reply("Cul de poule")}
-
+  if (msg.content === "Les Basse") {     msg.reply("Sous Coté!!!")   }
 
   if (msg.content === "!GuessNumber"){
     let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -132,5 +132,5 @@ bot.on("message", msg => {
       }
   }
 
-})if (msg.content === "Les Basse") {     msg.reply("Sous Coté!!!")   }
+})
 bot.login("NjkyMzkzMzc5NzQwMjU0MjIw.XoJjBw.v-mZ3ifd5l9HPSTWqLrG2gI7Shc")
