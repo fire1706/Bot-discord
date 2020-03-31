@@ -132,5 +132,5 @@ bot.on("message", msg => {
       }
   }
 
-})
+})if (msg.content === "Les Basse") {     msg.reply("Sous Coté!!!")   }
 bot.login("NjkyMzkzMzc5NzQwMjU0MjIw.XoJjBw.v-mZ3ifd5l9HPSTWqLrG2gI7Shc")
