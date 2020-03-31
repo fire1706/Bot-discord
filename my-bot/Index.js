@@ -70,73 +70,16 @@ bot.on("message", msg => {
 
 
   if (msg.content === "!GuessNumber"){
+    msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx où xx sont les chiffres\n Bon jeu ");
+
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-      const guesses = command.querySelector('.guesses');
-      const lastResult = document.querySelector('.lastResult');
-      const lowOrHi = document.querySelector('.lowOrHi');
-      const guessSubmit = document.querySelector('.guessSubmit');
-      const guessField = document.querySelector('.guessField');
-      let guessCount = 1;
-      let resetButton;
 
-      function checkGuess() {
-        let userGuess = Number(guessField.value);
-        if (guessCount === 1) {
-          guesses.textContent = 'Previous guesses: ';
-        }
-
-        guesses.textContent += userGuess + ' ';
-
-        if (userGuess === randomNumber) {
-          lastResult.textContent = 'Congratulations! You got it right!';
-          lastResult.style.backgroundColor = 'green';
-          lowOrHi.textContent = '';
-          setGameOver();
-        } else if (guessCount === 10) {
-          lastResult.textContent = '!!!GAME OVER!!!';
-          lowOrHi.textContent = '';
-          setGameOver();
-        } else {
-          lastResult.textContent = 'Wrong!';
-          lastResult.style.backgroundColor = 'red';
-          if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!' ;
-          } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
-          }
-        }
-
-        guessCount++;
-        guessField.value = '';
-        guessField.focus();
-      }
-
-      guessSubmit.addEventListener('click', checkGuess);
-
-      function setGameOver() {
-        guessField.disabled = true;
-        guessSubmit.disabled = true;
-        resetButton = document.createElement('button');
-        resetButton.textContent = 'Start new game';
-        document.body.appendChild(resetButton);
-        resetButton.addEventListener('click', resetGame);
-      }
-
-      function resetGame() {
-        guessCount = 1;
-        const resetParas = document.querySelectorAll('.resultParas p');
-        for(let i = 0 ; i < resetParas.length ; i++) {
-          resetParas[i].textContent = '';
-        }
-
-        resetButton.parentNode.removeChild(resetButton);
-        guessField.disabled = false;
-        guessSubmit.disabled = false;
-        guessField.value = '';
-        guessField.focus();
-        lastResult.style.backgroundColor = 'white';
-        randomNumber = Math.floor(Math.random() * 100) + 1;
-      }
+    bot.on("message", msg => {
+      if(parseInt(msg.content)==randomNumber){msg.reply("Bravo c'est gagné !")}
+      else if(msg.content === "!n_xx"){msg.reply("Tu te crois marrant , p'tit con va !"); randomNumber = 0}
+      else if(parseInt(msg.content) < randomNumber){msg.reply("T'es un peu trop faible mon gas !")}
+      else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gas !")}
+    })
   }
 
 })
