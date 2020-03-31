@@ -1,0 +1,8 @@
+OK voici la liste des choses à faire : 
+
+- mettre plus de Q/R
+- faire en sorte de pouvoir appeler des fonction extérieur pour les jeu
+- de manière général gérer le code de facon OOP
+- Rajouter une fonction help pour éluder les commandes
+- rajouter des jeux 
+-...
