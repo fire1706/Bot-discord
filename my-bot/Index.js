@@ -62,6 +62,10 @@ bot.on("message", msg => {
   if (msg.content ==="Pauline"){msg.reply("Cul de poule")}
   if (msg.content === "Les Basse") {     msg.reply("Sous Coté!!!")   }
 if (msg.content === "Qu'est ce qu'on veut?"){msg.reply("plus de solos!!!") }
+if (msg.content ==="Hey le bot ça va?"){msg.reply("Bien et toi ? mon petit!")}
+
+
+
   if (msg.content === "!GuessNumber"){
     let randomNumber = Math.floor(Math.random() * 100) + 1;
       const guesses = command.querySelector('.guesses');
