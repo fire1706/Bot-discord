@@ -90,3 +90,6 @@ function guessnumber(bot){
       else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gas !")}
   })
 }
+  }
+  if (msg.content === "Hey Jude") {
+    msg.reply("Don't let me go!")
