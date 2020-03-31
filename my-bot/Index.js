@@ -70,6 +70,9 @@ bot.on("message", msg => {
   if (msg.content === "Musique"){msg.channel.send("!play Hymne National de l'URSS")}
   if (msg.content === "Cristalline"){msg.reply("STALINE :raised_hands:")}
   if (msg.content === "J'ai faim"){msg.reply("On va chercher une poutine ? :pleading_face: ")}
+  if (msg.content === "Quoi?") {msg.reply("Feur ! :rofl:")}
+  if (msg.content === "Ptn") {msg.reply("t'es pas poli ! :triumph:")}
+  if (msg.content === "ALED") {msg.reply("Besoin d'une ampoule LED ?")}
   if (msg.content === "!GuessNumber"){
     msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx où xx sont les chiffres\n Bon jeu ");
     var jean = guessnumber(bot);
