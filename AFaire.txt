@@ -5,4 +5,5 @@ OK voici la liste des choses à faire :
 - de manière général gérer le code de facon OOP
 - Rajouter une fonction help pour éluder les commandes
 - rajouter des jeux 
--...
+- faire en sorte que le bot tourne 24/7 sans devoir le relancer a chaque fois depuis le terminal
+- laisser libre cours a son imagination
