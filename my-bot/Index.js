@@ -75,7 +75,7 @@ bot.on("message", msg => {
   if (msg.content === "ALED") {msg.reply("Besoin d'une ampoule LED ?")}
   if ((msg.content.includes("morgane")||msg.content.includes("Morgane"))&&msg.content.includes("loup")){msg.reply("Oh, ca c'est sûr !")}
   if ((msg.content.includes("Hey")||msg.content.includes("Slt")||msg.content.includes("Salut")||msg.content.includes("Bonjour"))&&(msg.content.includes("bot")||msg.content.includes("Bot"))){msg.reply("Bonjour, je suis enchanté de te voir ici, comment vas tu ?")}
-
+  if (msg.content === "Mamaaa"){msg.channel.send(":open-mouth: Houhouhouhouuuuuuu\n:open-mouth: Houhouhouhouuuuuuu\n:open-mouth: Houhouhouhouuuuuuu\n:open-mouth: Houhouhouhouuuuuuu\n")}
 
 
 
