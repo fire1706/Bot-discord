@@ -71,7 +71,7 @@ bot.on("message", msg => {
   if (msg.content === "Cristalline"){msg.reply("STALINE :raised_hands:")}
   if (msg.content === "J'ai faim"){msg.reply("On va chercher une poutine ? :pleading_face: ")}
   if (msg.content === "Quoi?" || msg.content === "Quoi ?" || msg.content === "Quoi" || msg.content === "quoi" || msg.content === "quoi ?") {msg.reply("Feur ! :rofl:")}
-  if (msg.content === "Ptn") {msg.reply("t'es pas poli ! :triumph:")}
+  if (msg.content === "Ptn" || msg.content === "Putain" || msg.content === "Merde") {msg.reply("t'es pas poli ! :triumph:")}
   if (msg.content === "ALED") {msg.reply("Besoin d'une ampoule LED ?")}
   if ((msg.content.includes("morgane")||msg.content.includes("Morgane"))&&msg.content.includes("loup")){msg.reply("Oh, ca c'est sûr !")}
   if ((msg.content.includes("Hey")||msg.content.includes("Slt")||msg.content.includes("Salut")||msg.content.includes("Bonjour"))&&(msg.content.includes("bot")||msg.content.includes("Bot"))){msg.reply("Bonjour, je suis enchanté de te voir ici, comment vas tu ?")}
