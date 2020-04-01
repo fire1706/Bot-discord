@@ -80,6 +80,13 @@ bot.on("message", msg => {
   if (msg.content.includes("discuter")){msg.reply("cuter :raised_hands:")}
   if (msg.content.includes("diverge")){msg.reply("verge :raised_hands:")}
 
+
+
+
+
+
+
+// ------------ partie jeu---------------------------
   if (msg.content === "!GuessNumber"){
     msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
     var jean = guessnumber(bot);
