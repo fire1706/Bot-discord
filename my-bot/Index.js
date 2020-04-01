@@ -102,7 +102,7 @@ function guessnumber(bot){
     var i = 0;
     let randomNumber = Math.floor(Math.random() * 100) + 1;
     bot.on("message", msg => {
-      if(parseInt(msg.content)==randomNumber){msg.reply("Bravo c'est gagné !");resetBot(msg.channel); return 1;}
+      if(parseInt(msg.content)==randomNumber){msg.reply("Bravo c'est gagné !");resetBot(msg.channel);randomNumber = null; return 1;}
       else if(msg.content === "!n_xx"){msg.reply("Tu te crois marrant , p'tit con va !")}
       else if(parseInt(msg.content) < randomNumber){msg.reply("T'es un peu trop faible mon gas !")}
       else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gas !")}
