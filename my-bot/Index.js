@@ -76,8 +76,9 @@ bot.on("message", msg => {
   if ((msg.content.includes("morgane")||msg.content.includes("Morgane"))&&msg.content.includes("loup")){msg.reply("Oh, ca c'est sûr !")}
   if ((msg.content.includes("Hey")||msg.content.includes("Slt")||msg.content.includes("Salut")||msg.content.includes("Bonjour"))&&(msg.content.includes("bot")||msg.content.includes("Bot"))){msg.reply("Bonjour, je suis enchanté de te voir ici, comment vas tu ?")}
   if (msg.content === "Mamaaa"){msg.channel.send(":open_mouth: Houhouhouhouuuuuuu\n:open_mouth: Houhouhouhouuuuuuu\n:open_mouth: Houhouhouhouuuuuuu\n:open_mouth: Houhouhouhouuuuuuu\n")}
-
-
+  if (msg.content.includes("Krylove")){msg.reply("LOVE :raised_hands:")}
+  if (msg.content.includes("discuter")){msg.reply("cuter :raised_hands:")}
+  if (msg.content.includes("diverge")){msg.reply("verge :raised_hands:")}
 
   if (msg.content === "!GuessNumber"){
     msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
