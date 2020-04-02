@@ -116,7 +116,7 @@ function guessnumber(bot){
       {
         msg.reply("Une partie est déjà en cours!");
       }
-      if(playing = true)
+      if(playing == true)
       {
         if(parseInt(msg.content)==randomNumber)
         {
