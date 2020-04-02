@@ -1,5 +1,7 @@
 const Discord = require("discord.js")
 const bot = new Discord.Client()
+const guessGame = guessnumber(bot);
+
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`)
 })
@@ -88,8 +90,8 @@ bot.on("message", msg => {
 
 // ------------ partie jeu---------------------------
   if (msg.content === "!GuessNumber"){
-    msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
-    var jean = guessnumber(bot);
+    
+
   }
 
 })
@@ -100,11 +102,37 @@ bot.login("NjkyMzkzMzc5NzQwMjU0MjIw.XoJjBw.v-mZ3ifd5l9HPSTWqLrG2gI7Shc")
 
 function guessnumber(bot){
     var i = 0;
-    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var randomNumber;
+    var playing = false;
     bot.on("message", msg => {
-      if(parseInt(msg.content)==randomNumber){msg.reply("Bravo c'est gagné !");resetBot(msg.channel); return 1;}
-      else if(parseInt(msg.content) < randomNumber){msg.reply("T'es un peu trop faible mon gars !")}
-      else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gars !")}
+      if(msg.content === "!GuessNumber" && playing == false)
+      {
+        msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
+        playing = true;
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log("GuessNumber started, " + randomNumber.toString());
+      }
+      else if(msg.content === "!GuessNumber" && playing == true)
+      {
+        msg.reply("Une partie est déjà en cours!");
+      }
+      if(playing = true)
+      {
+        if(parseInt(msg.content)==randomNumber)
+        {
+          msg.reply("Bravo c'est gagné !");
+          playing = false;
+        }
+        else if(parseInt(msg.content) < randomNumber)
+        {
+          msg.reply("T'es un peu trop faible mon gars !");
+        }
+        else if(parseInt(msg.content) > randomNumber)
+        {
+          msg.reply("T'es un peu trop haut mon gars !");
+        }
+      }
+      
   })
 }
 
