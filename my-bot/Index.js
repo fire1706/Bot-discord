@@ -89,9 +89,8 @@ bot.on("message", msg => {
 
 
 // ------------ partie jeu---------------------------
-  if (msg.content === "!GuessNumber"){
-    
-
+  if (msg.content === "!jeu"){
+    msg.reply("Les jeux disponible pour le moment sont :\n !GuessNumber \n rien d'autre")
   }
 
 })
@@ -132,7 +131,7 @@ function guessnumber(bot){
           msg.reply("T'es un peu trop haut mon gars !");
         }
       }
-      
+
   })
 }
 
