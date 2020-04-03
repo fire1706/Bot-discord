@@ -58,7 +58,7 @@ bot.on("message", msg => {
     msg.reply("... that men is a meme !")
   }
   if (msg.content === "Ulys") {
-    msg.reply("Vive l'empereur !")
+    msg.reply("Vive l'Empereur !")
   }
   if (msg.content === "Baptiste") {msg.reply("il est con")}
   if (msg.content ==="la fanfare d'Acoz"){msg.reply("les meilleures du royaume")}
