@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 const bot = new Discord.Client()
 const guessGame = guessnumber(bot);
+const guessGameHard = guessnumberHard(bot);
 
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`)
@@ -129,6 +130,74 @@ function guessnumber(bot){
         else if(parseInt(msg.content) > randomNumber)
         {
           msg.reply("T'es un peu trop haut mon gars !");
+        }
+      }
+
+  })
+}
+
+
+function guessnumberHard(bot){
+    var i = 0;
+    var randomNumber;
+    var playing = false;
+    var inc;
+    bot.on("message", msg => {
+      if(msg.content === "!GuessNumberHard" && playing == false)
+      {
+        msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Par contre, à chaque essai que tu feras, le nombre aura une certaine chance de légèrement changer de valeur! \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
+        playing = true;
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log("GuessNumber started, " + randomNumber.toString());
+      }
+      else if(msg.content === "!GuessNumberHard" && playing == true)
+      {
+        msg.reply("Une partie est déjà en cours!");
+      }
+      if(playing == true && !isNaN(msg.content))
+      {
+        if(parseInt(msg.content)==randomNumber)
+        {
+          msg.reply("Bravo c'est gagné !");
+          playing = false;
+        }
+        else
+        { 
+          if(parseInt(msg.content) < randomNumber)
+          {
+            msg.reply("T'es un peu trop faible mon gars !");
+          }
+          else if(parseInt(msg.content) > randomNumber)
+          {
+            msg.reply("T'es un peu trop haut mon gars !");
+          }
+          inc = Math.random();
+          if(inc < 0.3)
+          {
+            if(randomNumber != 100){randomNumber += 1;}
+            else{randomNumber = 1;}
+          }
+          else if(inc < 0.6)
+          {
+            if(randomNumber != 1){randomNumber -= 1;}
+            else{randomNumber = 100;}
+          }
+          else if(inc <0.75)
+          {
+            if(randomNumber < 99){randomNumber += 2;}
+            else if(randomNumber == 99){randomNumber = 1;}
+            else{randomNumber = 2;}
+          }
+          else if(inc <0.9)
+          {
+            if(randomNumber > 2){randomNumber -= 2;}
+            else if(randomNumber == 2){randomNumber = 100;}
+            else{randomNumber = 99;}
+          }
+
+          // for debug purposes only
+          console.log("GuessNumberHard updated to " + randomNumber.toString());
+          
         }
       }
 
