@@ -1,4 +1,4 @@
-function guessnumber(bot){
+/*function guessnumber(bot){
   bot.on("message", msg => {
     msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx où xx sont les chiffres\n Bon jeu ");
 
@@ -11,3 +11,4 @@ function guessnumber(bot){
     else if(parseInt(msg.content) > randomNumber){msg.reply("T'es un peu trop haut mon gas !")}
   })
 }
+*/
