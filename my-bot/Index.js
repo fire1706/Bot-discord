@@ -91,7 +91,7 @@ bot.on("message", msg => {
 
 // ------------ partie jeu---------------------------
   if (msg.content === "!jeu"){
-    msg.reply("Les jeux disponible pour le moment sont :\n !GuessNumber \n rien d'autre")
+    msg.reply("Les jeux disponible pour le moment sont :\n !GuessNumber \n !GuessNumberHard\n rien d'autre")
   }
 
 })
@@ -162,7 +162,7 @@ function guessnumberHard(bot){
           playing = false;
         }
         else
-        { 
+        {
           if(parseInt(msg.content) < randomNumber)
           {
             msg.reply("T'es un peu trop faible mon gars !");
@@ -197,7 +197,7 @@ function guessnumberHard(bot){
 
           // for debug purposes only
           console.log("GuessNumberHard updated to " + randomNumber.toString());
-          
+
         }
       }
 
