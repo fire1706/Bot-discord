@@ -94,7 +94,7 @@ bot.on("message", msg => {
 
 // ------------ partie jeu---------------------------
   if (msg.content === "!jeu"){
-    msg.reply(jeu)
+    msg.channel.send(jeu)
   }
 
 })
