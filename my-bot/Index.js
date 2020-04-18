@@ -2,6 +2,9 @@ const Discord = require("discord.js")
 const bot = new Discord.Client()
 const guessGame = guessnumber(bot);
 const guessGameHard = guessnumberHard(bot);
+const ppc = PPC(bot);
+var jeu = "Les jeux disponible pour le moment sont :\n !GuessNumber \n !GuessNumberHard\n !PPC  (akka chiffoumi) \nrien d'autre"
+
 
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`)
@@ -91,7 +94,7 @@ bot.on("message", msg => {
 
 // ------------ partie jeu---------------------------
   if (msg.content === "!jeu"){
-    msg.reply("Les jeux disponible pour le moment sont :\n !GuessNumber \n !GuessNumberHard\n rien d'autre")
+    msg.reply(jeu)
   }
 
 })
@@ -203,6 +206,35 @@ function guessnumberHard(bot){
 
   })
 }
+
+
+function PPC(){// pierre papier ciseau
+  var randomNumber
+  bot.on("message", msg => {
+    if(msg.content.includes("!PPC")){
+      randomNumber = Math.floor(Math.random() * 3) + 1;
+      // papier == 1; pierre == 2 ; ciseau ==3
+      if(msg.content.includes("papier")||msg.content.includes("Papier")){
+        if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est égalité !")}
+        if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est gagné !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est perdu !")}
+      }
+      else if(msg.content.includes("pierre")||msg.content.includes("Pierre")){
+        if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est perdu !")}
+        if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est égalité !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est gagné !")}
+      }
+      else if(msg.content.includes("ciseau")||msg.content.includes("Ciseau")){
+        if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est gagné !")}
+        if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est perdu !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est égalité !")}
+      }
+      else if(msg.content == jeu ){ }
+      else {msg.reply("N'oublie pas de rajouter pierre, papier ou ciseau après !PPC ;)")}
+    }
+  })
+}
+
 
 function resetBot(channel) {
     // send channel a message that you're resetting bot [optional]
