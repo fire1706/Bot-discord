@@ -148,7 +148,7 @@ function guessnumberHard(bot){
     bot.on("message", msg => {
       if(msg.content === "!GuessNumberHard" && playing == false)
       {
-        msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu est trop haut ou trop bas ;) \n Par contre, à chaque essai que tu feras, le nombre aura une certaine chance de légèrement changer de valeur! \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
+        msg.reply("Ok, alors jouons!\n Voici les règles : j'ai choisi un chiffres entre 1 et 100 et tu vas devoir le deviner , à chaque fois je te dirai si tu es trop haut ou trop bas ;) \n Par contre, à chaque essai que tu feras, le nombre aura une certaine chance de légèrement changer de valeur! \n Pour plus de facilité , tu devras formuler ton message comme ceci : xx \n Bon jeu ");
         playing = true;
         randomNumber = Math.floor(Math.random() * 100) + 1;
         console.log("GuessNumber started, " + randomNumber.toString());
@@ -217,20 +217,20 @@ function PPC(){// pierre papier ciseau
       if(msg.content.includes("papier")||msg.content.includes("Papier")){
         if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est égalité !")}
         if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est gagné !")}
-        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est perdu !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseaux :scissors:, c'est perdu !")}
       }
       else if(msg.content.includes("pierre")||msg.content.includes("Pierre")){
         if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est perdu !")}
         if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est égalité !")}
-        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est gagné !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseaux :scissors:, c'est gagné !")}
       }
-      else if(msg.content.includes("ciseau")||msg.content.includes("Ciseau")){
+      else if(msg.content.includes("ciseaux")||msg.content.includes("Ciseaux")){
         if(randomNumber==1){msg.reply("Bot a lancé un papier :roll_of_paper:, c'est gagné !")}
         if(randomNumber==2){msg.reply("Bot a lancé un pierre :woozy_face:, c'est perdu !")}
-        if(randomNumber==3){msg.reply("Bot a lancé un ciseau :scissors:, c'est égalité !")}
+        if(randomNumber==3){msg.reply("Bot a lancé un ciseaux :scissors:, c'est égalité !")}
       }
       else if(msg.content == jeu ){ }
-      else {msg.reply("N'oublie pas de rajouter pierre, papier ou ciseau après !PPC ;)")}
+      else {msg.reply("N'oublie pas de rajouter pierre, papier ou ciseaux après !PPC ;)")}
     }
   })
 }
