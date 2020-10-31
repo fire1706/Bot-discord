@@ -85,7 +85,43 @@ bot.on("message", msg => {
   if (msg.content.includes("Krylove")){msg.reply("LOVE :raised_hands:")}
   if (msg.content.includes("discuter")){msg.reply("cuter :raised_hands:")}
   if (msg.content.includes("diverge")){msg.reply("verge :raised_hands:")}
-
+  if (msg.content.includes("Hugo")){msg.reply("c'est un loup ! :wolf:")}
+  if (msg.content === "!Blague"){
+    r = Math.floor(Math.random() * 16) + 1;
+    console.log(r);
+    if(r == 1){
+    msg.reply("C'est l'histoire d'un nain...\n elle est courte mais elle est bonne :eggplant:")}
+    if(r == 2){
+    msg.reply("C'est l'histoire du ptit dej, tu la connais ?\n Pas de bol !")}
+    if(r == 3){
+    msg.reply("C'est l'histoire d'une blague vaseuse\n Mets tes bottes.")}
+    if(r == 4){
+    msg.reply("C'est l'histoire de l'eunuque décapité\nUne histoire sans queue ni tête. Passion humour noir.")}
+    if(r == 5){
+    msg.reply("C'est l'histoire d'un pingouin qui respire par les fesses\nUn jour il s’assoit et il meurt")}
+    if(r == 6){
+    msg.reply("C'est l'histoire d'un zoophile qui rentre dans un bar.")}
+    if(r == 7){
+    msg.reply("Pourquoi les Belges viennent-ils à la messe avec du savon ?\nPour l’Ave Maria.")}
+    if(r == 8){
+    msg.reply("Comment s'appelle le cul de la Schtroumpfette ?\nLe blu-ray.")}
+    if(r == 9){
+    msg.reply("Comment reconnaît-on une lettre envoyée par un lépreux ?\nLa langue est collée au timbre")}
+    if(r == 10){
+    msg.reply("Pourquoi on ne peut pas la faire à un bébé avorté ?\nParce qu’il n’est pas né d’hier")}
+    if(r == 11){
+    msg.reply("Peut-on prendre un bain quand on a la diarrhée ?\nOui si vous en avez assez")}
+    if(r == 12){
+    msg.reply("Quel est le point commun entre un enfant africain et une fleur ?\nIls sont besoin d’eau pendant une semaine et après ils meurent")}
+    if(r == 13){
+    msg.reply("Combien de tour fait un bébé dans un micro-onde avant d'exploser ?\nJe sais pas, j’ai du mal à compter quand je me masturbe.")}
+    if(r == 14){
+    msg.reply(" Qu'est-ce qui a 5 bras, 3 jambes et 2 pieds ?\nLa ligne d’arrivée au marathon de Boston")}
+    if(r == 15){
+    msg.reply(" Ca fais quel bruit un petit poussin ?\nPIOU PIOU PIOU")}
+    if(r == 16){
+    msg.reply("un nain court et rigole pk?\npcq l'herbe lui chatouille les couilles")}
+  }
 
 
 
